@@ -64,9 +64,8 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
       4. Run the executable NeutronDet
     
     To start the application:
-
       1. After starting the application it is necessary to initialize the Geant4 kernel with the
-        ineractive command /run/initialize. 
+        interactive command /run/initialize. 
       2. Optionally: you can change the name of the root output file with the interactive commmand
         /analysis/setFileName <fileName>
       3. Create a run with the interactive command /run/beamOn <number of events>
