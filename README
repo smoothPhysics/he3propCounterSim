@@ -56,6 +56,8 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
 	
  5- HOW TO START ?
 
+    If you dont have geant4 installed: https://geant4.web.cern.ch/download/10.7.4.html
+
     To build the application: 
       1. Create a build directory in the program folder
       2. Go to the build directory and execute: $ cmake ..
