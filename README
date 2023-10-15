@@ -1,4 +1,4 @@
-This multithreaded Geant4 program simulates a ³He counter tube for thermal and epithermal neutron detection. The detector simulated is the VacuTect 70063 proportional counter with 4bar pressure.
+This multithreaded Geant4 program simulates a ³He counter tube for thermal and epithermal neutron detection. The detector simulated is the VacuTec 70063 proportional counter with 4bar pressure.
 Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Zaehlrohre__GM-__P-__N-_/Neutronen_Zaehlrohre/He-3_NEUTRON_DETECTORS_flyer_710_3.pdf
 
 	
