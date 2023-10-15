@@ -50,8 +50,7 @@ void DetectorConstruction::DefineMaterials()
     //World material (Air, 1atm)
     worldMat = nist->FindOrBuildMaterial("G4_AIR");
 
-    //Helium-3 definition from geant4 forum:
-    //https://geant4-forum.web.cern.ch/t/helium-3-neutron-capture-cross-section-doesnt-seem-right/2544
+    //Helium-3 definition:
     G4double density;
     G4double A; //atomic mass
     G4double Z; //atomic number
