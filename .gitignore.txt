@@ -1,0 +1,5 @@
+# Ignore all .tmp files
+*.tmp
+
+# Ignore a directory named "temp"
+build/

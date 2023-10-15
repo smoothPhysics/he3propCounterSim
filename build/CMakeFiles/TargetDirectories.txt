@@ -1,0 +1,7 @@
+/my_src/NeutronDetector/build/CMakeFiles/install/strip.dir
+/my_src/NeutronDetector/build/CMakeFiles/install/local.dir
+/my_src/NeutronDetector/build/CMakeFiles/install.dir
+/my_src/NeutronDetector/build/CMakeFiles/list_install_components.dir
+/my_src/NeutronDetector/build/CMakeFiles/rebuild_cache.dir
+/my_src/NeutronDetector/build/CMakeFiles/edit_cache.dir
+/my_src/NeutronDetector/build/CMakeFiles/NeutronDet.dir

@@ -1,0 +1,42 @@
+
+/control/verbose 0
+/run/verbose 0
+/tracking/verbose 0
+#
+/run/initialize
+#
+/analysis/setFileName hits_001eV_4bar.root
+/gun/energy 0.001 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_004eV_4bar.root
+/gun/energy 0.004 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_007eV_4bar.root
+/gun/energy 0.007 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_010eV_4bar.root
+/gun/energy 0.010 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_013eV_4bar.root
+/gun/energy 0.012 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_016eV_4bar.root
+/gun/energy 0.016 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_019eV_4bar.root
+/gun/energy 0.019 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_022eV_4bar.root
+/gun/energy 0.022 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_025eV_4bar.root
+/gun/energy 0.025 eV
+/run/beamOn 100000
