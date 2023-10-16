@@ -6,8 +6,7 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
 ## GEOMETRY DEFINITION
 
 The world is a Box filled with Air at 1 bar pressure.
-Inside of the world volume is the ³He counter tube (G4Tubs) which has following components<br />
-asigned to his volume:<br />
+Inside of the world volume is the ³He counter tube (G4Tubs) which has following components asigned to his volume:<br />
 - Stainless steel wall (AES 304 stainless steel)<br />
 - Active detector Gas (³He, 4bar pressure)<br />
 - Currently only as comment: Anode wire in the middle of the tube with diameter 100um<br /><br />
@@ -60,8 +59,14 @@ If you dont have geant4 installed: https://geant4.web.cern.ch/download/10.7.4.ht
 
 To build the application: <br />
 1. Create a build directory in the program folder<br />
-2. Go to the build directory and execute: $ cmake ..<br />
-3. After that you can execute:  $ make .<br />
+2. Go to the build directory and execute: 
+```console
+cmake ..
+```
+3. Build the program:
+```console
+make
+```
 4. Run the executable NeutronDet<br /><br />
 
 To start the application:<br />
