@@ -21,9 +21,8 @@
 
 int main(int argc,char** argv) {
 
-  //detect interactive mode (if no arguments) and define UI session
-  G4UIExecutive* ui = nullptr;
-  if (argc == 1) ui = new G4UIExecutive(argc,argv);
+  //define ui session
+  G4UIExecutive* ui = new G4UIExecutive(argc,argv);
 
   //choose the Random engine
   G4Random::setTheEngine(new CLHEP::RanecuEngine);
@@ -55,28 +54,17 @@ int main(int argc,char** argv) {
   G4ParticleHPManager::GetInstance()->SetProduceFissionFragments( false );
   G4ParticleHPManager::GetInstance()->SetUseWendtFissionModel( false );
   G4ParticleHPManager::GetInstance()->SetUseNRESP71Model( false );
-  
-  //initialize visualization
-  G4VisManager* visManager = nullptr;
 
   //get the pointer to the User Interface manager
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
-  if (true)  {
-   //interactive mode
-   visManager = new G4VisExecutive;
-   visManager->Initialize();
-   ui->SessionStart();
-   delete ui;
-  }
-  else  {
-   //batch mode
-   G4String command = "/control/execute ";
-   G4String fileName = argv[1];
-   UImanager->ApplyCommand(command+fileName);
-  }
+  //init visualization & start interactive mode 
+  G4VisManager* visManager = new G4VisExecutive;
+  visManager->Initialize();
+  ui->SessionStart();
 
   //job termination
+  delete ui;
   delete visManager;
   delete runManager;
 }
