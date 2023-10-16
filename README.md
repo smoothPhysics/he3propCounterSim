@@ -1,9 +1,9 @@
-# ABOUT
+## ABOUT
 
 This multithreaded Geant4 program simulates a ³He counter tube for thermal and epithermal neutron detection. The detector simulated is the VacuTec 70063 proportional counter with 4bar pressure.
 Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Zaehlrohre__GM-__P-__N-_/Neutronen_Zaehlrohre/He-3_NEUTRON_DETECTORS_flyer_710_3.pdf
 	
-# GEOMETRY DEFINITION
+## GEOMETRY DEFINITION
 
 The world is a Box filled with Air at 1 bar pressure.
 Inside of the world volume is the ³He counter tube (G4Tubs) which has following components 
@@ -14,7 +14,7 @@ asigned to his volume:
 
 The detector measurements can be changed in the DetectorConstruction.hh header file
  	
-# PHYSICS LIST
+## PHYSICS LIST
  
 The PhysicsList implements builders for:
 	-Hadronic elastic physics
@@ -24,7 +24,7 @@ The PhysicsList implements builders for:
 	-EM physics
 	-Gamma nuclear physics 
  	 
-# THE PRIMARY GENERATOR
+## THE PRIMARY GENERATOR
  
 Primary particle: neutron
 Default energy: 25 meV (thermal neutrons)
@@ -36,7 +36,7 @@ Two options for the position of the particle gun are available (both are in the 
 	-Neutron bombardment over the full length and height of the counter tube
 	-Focused neutron beam with round cross sectional area
 
-# ANALYSIS
+## ANALYSIS
 
 Goal of each run of n events is to:
 	1. Store all reaction points of the n + ³He -> p + ³H process in the counter tube
