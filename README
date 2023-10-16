@@ -2,7 +2,7 @@ This multithreaded Geant4 program simulates a ³He counter tube for thermal and 
 Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Zaehlrohre__GM-__P-__N-_/Neutronen_Zaehlrohre/He-3_NEUTRON_DETECTORS_flyer_710_3.pdf
 
 	
- # 1. GEOMETRY DEFINITION
+ # GEOMETRY DEFINITION
 
    The world is a Box filled with Air at 1 bar pressure.
    Inside of the world volume is the ³He counter tube (G4Tubs) which has following components 
@@ -13,7 +13,7 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
 
   The detector measurements can be changed in the DetectorConstruction.hh header file
  	
- # 2. PHYSICS LIST
+ # PHYSICS LIST
  
    The PhysicsList implements builders for:
     -Hadronic elastic physics
@@ -23,7 +23,7 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
     -EM physics
     -Gamma nuclear physics 
  	 
- # 3. THE PRIMARY GENERATOR
+ # THE PRIMARY GENERATOR
  
    Primary particle: neutron
    Default energy: 25 meV (thermal neutrons)
@@ -35,7 +35,7 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
     -Neutron bombardment over the full length and height of the counter tube
     -Focused neutron beam with round cross sectional area
 
- # 4. ANALYSIS
+ # ANALYSIS
 
   Goal of each run of n events is to:
     1. Store all reaction points of the n + ³He -> p + ³H process in the counter tube
@@ -54,7 +54,7 @@ Datasheet: https://www.vacutec-gmbh.de/fileadmin/VacuTec-Files/produkte/umwelt/Z
 
     The detector efficiency data, list of nuclear reactions, cross section and the list of produced particles gets written to the output file output.txt.
 	
- # 5. HOW TO START ?
+ # HOW TO START ?
 
     If you dont have geant4 installed: https://geant4.web.cern.ch/download/10.7.4.html
 
