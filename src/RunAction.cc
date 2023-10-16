@@ -26,12 +26,14 @@ RunAction::RunAction(DetectorConstruction* det, PrimaryGeneratorAction* prim)
   //default file name: hits.root
   analysisManager->SetFileName("hits.root");
 
+  //Ntuple to store position of n + ³He reaction in detector volume
   analysisManager->CreateNtuple("Hits", "Hits");
   analysisManager->CreateNtupleDColumn("fX");
   analysisManager->CreateNtupleDColumn("fY");
   analysisManager->CreateNtupleDColumn("fZ");
   analysisManager->FinishNtuple(0);
 
+  //Ntuple to visualize areas where most transportations through the detector are happening
   analysisManager->CreateNtuple("Transportation", "Transportation");
   analysisManager->CreateNtupleDColumn("fX");
   analysisManager->CreateNtupleDColumn("fY");
@@ -39,11 +41,13 @@ RunAction::RunAction(DetectorConstruction* det, PrimaryGeneratorAction* prim)
   analysisManager->CreateNtupleDColumn("pathLength");
   analysisManager->FinishNtuple(1);
 
+  //Ntuple to store the energy of the secondaries (proton, trition) of each detector hit
   analysisManager->CreateNtuple("Secondaries", "Secondaries");
   analysisManager->CreateNtupleDColumn("proton");
   analysisManager->CreateNtupleDColumn("triton"); 
   analysisManager->FinishNtuple(2);
 
+  //Ntuple to store the the total energyDeposit of the secondaries per detector hit
   analysisManager->CreateNtuple("Edep", "Edep");
   analysisManager->CreateNtupleDColumn("energyDeposit");
   analysisManager->FinishNtuple(3);
@@ -83,7 +87,7 @@ void RunAction::EndOfRunAction(const G4Run*)
 {
   if (G4Threading::IsMasterThread()) run->EndOfRun(print);
   
-  //save histograms and automatically merge nTuples 
+  //save histograms and automatically merge Ntuples 
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
   analysisManager->Write();
   analysisManager->CloseFile();
