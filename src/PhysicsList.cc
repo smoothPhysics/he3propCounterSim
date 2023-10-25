@@ -12,6 +12,7 @@
 #include "GammaNuclearPhysicsLEND.hh"
 //#include "G4RadioactiveDecayPhysics.hh"
 #include "G4EmStandardPhysics.hh"
+#include "G4EmExtraPhysics.hh"
 
 // particles
 #include "G4BosonConstructor.hh"
@@ -38,6 +39,7 @@ PhysicsList::PhysicsList()
   
   //Hadron Elastic scattering
   RegisterPhysics( new G4HadronElasticPhysicsHP(verb));  
+  
   //Hadron Inelastic physics
   //  -QGS Quark gluon string model (>~20GeV) 
   //  -BIC Binary Cascade Model (<~10 GeV) 
@@ -52,6 +54,7 @@ PhysicsList::PhysicsList()
 
   //EM physics
   RegisterPhysics( new G4EmStandardPhysics(verb));
+  RegisterPhysics( new G4EmExtraPhysics(verb));
 
   //Gamma physics
   RegisterPhysics( new GammaNuclearPhysicsLEND("gamma"));
@@ -94,4 +97,5 @@ void PhysicsList::ConstructParticle()
 void PhysicsList::SetCuts()
 {
    SetCutValue(0.*mm, "proton");
+   SetCutValue(0.*mm, "triton");
 }

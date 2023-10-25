@@ -6,6 +6,8 @@
 
 #define INCIDENT_NEUTRON_TRACK 1    //Geant4 Track ID of the incident particle
 
+bool newHit = false;
+
 SensitiveDetector::SensitiveDetector(G4String name) : G4VSensitiveDetector(name),
 totalEDepositPerEvent(0.)
 {}
@@ -39,6 +41,8 @@ bool SensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory * R0Hist)
     if(aStep->GetTrack()->GetTrackID() == INCIDENT_NEUTRON_TRACK) {
 
         if(process->GetProcessName() == "neutronInelastic") {
+
+            newHit = true;
 
             if(aStep->GetTrack()->GetMomentum().getX() == -1.0) {
                 G4cout << "Neutron detection after elastic scattering on wall of detector" << G4endl;
@@ -81,23 +85,27 @@ bool SensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory * R0Hist)
 
         }
 
-    //Count all processes of the secondary particles (except transportations)
-    } else if (!process->GetProcessName().contains("Transportation")) {
-
+    //Count all processes of the secondary particles and kill the trakc once the reach the
+    //detector wall (geometric boundary of the sensitive detector)
+    } else if((aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "triton" ||
+        aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "proton")) {
         G4double eventID = runManager->GetCurrentEvent()->GetEventID();
         std::map<G4int, G4double>::iterator it = fEnergyDepositMap.find(eventID);
         G4double Edep = aStep->GetTotalEnergyDeposit();
 
+        if(postStepPoint->GetStepStatus() == fGeomBoundary && process->GetProcessName() == "Transportation") {
+            G4RunManager::GetRunManager()->AbortEvent(); 
+        }
         if (it == fEnergyDepositMap.end()) {
             if(totalEDepositPerEvent != 0.0) {
                 analysisManager->FillNtupleDColumn(3,0,totalEDepositPerEvent);
                 analysisManager->AddNtupleRow(3);
             }
-            fEnergyDepositMap[eventID] = aStep->GetTotalEnergyDeposit();
+                fEnergyDepositMap[eventID] = aStep->GetTotalEnergyDeposit();
         } else {
-            it->second += Edep;
-            totalEDepositPerEvent = it->second;
+                it->second += Edep;
+                totalEDepositPerEvent = it->second;
         }
-    }    
+    }   
     return true;
 }
