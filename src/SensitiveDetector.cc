@@ -6,8 +6,6 @@
 
 #define INCIDENT_NEUTRON_TRACK 1    //Geant4 Track ID of the incident particle
 
-bool newHit = false;
-
 SensitiveDetector::SensitiveDetector(G4String name) : G4VSensitiveDetector(name),
 totalEDepositPerEvent(0.)
 {}
@@ -40,9 +38,7 @@ bool SensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory * R0Hist)
     //Count processes of the incident neutron with the ³He gas volume
     if(aStep->GetTrack()->GetTrackID() == INCIDENT_NEUTRON_TRACK) {
 
-        if(process->GetProcessName() == "neutronInelastic") {
-
-            newHit = true;
+        if(process->GetProcessName() == "neutronInelastic") {y
 
             if(aStep->GetTrack()->GetMomentum().getX() == -1.0) {
                 G4cout << "Neutron detection after elastic scattering on wall of detector" << G4endl;
@@ -85,7 +81,7 @@ bool SensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory * R0Hist)
 
         }
 
-    //Count all processes of the secondary particles and kill the trakc once the reach the
+    //Count all processes of the secondary particles and kill the track once the reach the
     //detector wall (geometric boundary of the sensitive detector)
     } else if((aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "triton" ||
         aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "proton")) {

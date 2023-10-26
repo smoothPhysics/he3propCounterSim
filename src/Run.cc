@@ -232,11 +232,11 @@ void Run::EndOfRun(G4bool print)
   G4int prec = 5, wid = prec + 2;  
   G4int dfprec = G4cout.precision(prec);
   
-  std::string  filename = "hits.txt";
-  std::ofstream dataFile;
+  std::string  filename = "output.txt";
+  std::ofstream outputFile;
   bool fileOpen = false;
-  dataFile.open(filename, std::ios::app);
-  if (dataFile.is_open()) {
+  outputFile.open(filename, std::ios::app);
+  if (outputFile.is_open()) {
     fileOpen = true;
   }
 
@@ -250,7 +250,7 @@ void Run::EndOfRun(G4bool print)
          << "a VacuTect ³He proprotional counter tube (70063, 4bar)" 
          << G4endl;
   if(fileOpen) {
-    dataFile << "\nThe run is " << numberOfEvent << " neutrons" << " of "
+    outputFile << "\nThe run is " << numberOfEvent << " neutrons" << " of "
          << G4BestUnit(fEkin,"Energy") << " through " 
          << "a VacuTect ³He proprotional counter tube (70063, 4bar)"
          << G4endl;
@@ -261,7 +261,7 @@ void Run::EndOfRun(G4bool print)
   //frequency of processes
   G4cout << "\nProcesses (without transportation):" << G4endl;
   if(fileOpen)
-    dataFile << "\nProcesses (without transportation):" << G4endl;
+    outputFile << "\nProcesses (without transportation):" << G4endl;
   std::map<G4String,G4int>::iterator it;    
   for (it = fProcCounter.begin(); it != fProcCounter.end(); it++) {
     G4String procName = it->first;
@@ -269,7 +269,7 @@ void Run::EndOfRun(G4bool print)
     if(procName != "Transportation") {
     G4cout << procName << "= " << count << "\t";
     if(fileOpen)
-      dataFile << procName << "= " << count << "\t";
+      outputFile << procName << "= " << count << "\t";
     }
   }
       
@@ -294,18 +294,18 @@ void Run::EndOfRun(G4bool print)
          << (((G4double)hits / (G4double)numberOfEvent)*100.0) << "%" << G4endl;
 
   if(fileOpen) {
-    dataFile << "\n\nEntries, hits and transportations in ³He volume:" << G4endl; 
-    dataFile << "Entries:\t\t" << (hits + transportations)
+    outputFile << "\n\nEntries, hits and transportations in ³He volume:" << G4endl; 
+    outputFile << "Entries:\t\t" << (hits + transportations)
           << " (" << (((G4double)(hits + transportations) / (G4double)numberOfEvent)*100.0) << "% of incident neutrons)"
           << G4endl;
-    dataFile << "Hits:\t\t" << hits
+    outputFile << "Hits:\t\t" << hits
           << " (" << (((G4double)hits / (G4double)entries)*100.0) << "% of entries)"
           << G4endl;
-    dataFile << "Transportations:\t" << transportations
+    outputFile << "Transportations:\t" << transportations
           << " (" << (((G4double)transportations / (G4double)entries)*100.0) << "% of entries)"
           << G4endl;
 
-    dataFile << "\nRelative effiency (hits to entered neutrons):\t"
+    outputFile << "\nRelative effiency (hits to entered neutrons):\t"
           << (((G4double)hits / (G4double)entries)*100.0) << "%" 
           << "\nTotal effiency (hits to incident neutrons):\t"
           << (((G4double)hits / (G4double)numberOfEvent)*100.0) << "%" << G4endl;
@@ -329,7 +329,7 @@ void Run::EndOfRun(G4bool print)
          << "\tmassic: "             << G4BestUnit(massicMFP, "Mass/Surface")
          << G4endl;
   if(fileOpen) {
-    dataFile  << "\n\nMeanFreePath:\t"   << G4BestUnit(MeanFreePath,"Length")
+    outputFile  << "\n\nMeanFreePath:\t"   << G4BestUnit(MeanFreePath,"Length")
               << " +- "                   << G4BestUnit(rms,"Length")
               << "\tmassic: "             << G4BestUnit(massicMFP, "Mass/Surface")
               << G4endl;
@@ -344,7 +344,7 @@ void Run::EndOfRun(G4bool print)
            << "\nInelastic cross section per atom:\t" << G4BestUnit(crossSection,"Surface") 
            << G4endl;
     if(fileOpen) {
-      dataFile  << "Number of Atoms per Volume:\t" << nbAtoms 
+      outputFile  << "Number of Atoms per Volume:\t" << nbAtoms 
                 << "\nInelastic cross section per atom:\t" << G4BestUnit(crossSection,"Surface") 
                 << G4endl;
     }
@@ -352,7 +352,7 @@ void Run::EndOfRun(G4bool print)
    
   //check cross section from G4HadronicProcessStore
   G4cout << "\nVerification: " << "crossSections from G4HadronicProcessStore:";
-  if(fileOpen) dataFile << "\nVerification: " << "crossSections from G4HadronicProcessStore:";
+  if(fileOpen) outputFile << "\nVerification: " << "crossSections from G4HadronicProcessStore:";
   
   G4ProcessTable* processTable  = G4ProcessTable::GetProcessTable();
   G4HadronicProcessStore* store = G4HadronicProcessStore::Instance();
@@ -372,7 +372,7 @@ void Run::EndOfRun(G4bool print)
               << G4BestUnit(massSigma, "Surface/Mass") << "\t"
               << G4BestUnit(xs2, "Surface");
       if(fileOpen) {
-        dataFile  << "\n" << std::setw(20) << procName << "= "
+        outputFile  << "\n" << std::setw(20) << procName << "= "
                 << G4BestUnit(massSigma, "Surface/Mass") << "\t"
                 << G4BestUnit(xs2, "Surface");
       }
@@ -381,7 +381,7 @@ void Run::EndOfRun(G4bool print)
               
  //nuclear channel count
  G4cout << "\n\n List of nuclear reactions: \n" << G4endl; 
-if(fileOpen) dataFile << "\n\n List of nuclear reactions: \n" << G4endl; 
+if(fileOpen) outputFile << "\n\n List of nuclear reactions: \n" << G4endl; 
  std::map<G4String,NuclChannel>::iterator ic;               
  for (ic = fNuclChannelMap.begin(); ic != fNuclChannelMap.end(); ic++) { 
     G4String name    = ic->first;
@@ -393,7 +393,7 @@ if(fileOpen) dataFile << "\n\n List of nuclear reactions: \n" << G4endl;
              << "   Q = " << std::setw(wid) << G4BestUnit(Q, "Energy")
              << G4endl;    
       if(fileOpen) 
-        dataFile  << std::setw(60) << name << ": " << std::setw(7) << count
+        outputFile  << std::setw(60) << name << ": " << std::setw(7) << count
                   << "   Q = " << std::setw(wid) << G4BestUnit(Q, "Energy")
                   << G4endl; 
     }        
@@ -401,7 +401,7 @@ if(fileOpen) dataFile << "\n\n List of nuclear reactions: \n" << G4endl;
             
  //particles count
  G4cout << "\n List of generated particles:" << G4endl;
- if(fileOpen) dataFile << "\n List of generated particles:" << G4endl;
+ if(fileOpen) outputFile << "\n List of generated particles:" << G4endl;
      
  std::map<G4String,ParticleData>::iterator itn;               
  for (itn = fParticleDataMap.begin(); itn != fParticleDataMap.end(); itn++) { 
@@ -417,7 +417,7 @@ if(fileOpen) dataFile << "\n\n List of nuclear reactions: \n" << G4endl;
            << " --> " << G4BestUnit(eMax, "Energy") 
            << ")" << G4endl;
     if(fileOpen) {
-      dataFile  << "  " << std::setw(13) << name << ": " << std::setw(7) << count
+      outputFile  << "  " << std::setw(13) << name << ": " << std::setw(7) << count
                 << "  Emean = " << std::setw(wid) << G4BestUnit(eMean, "Energy")
                 << "\t( "  << G4BestUnit(eMin, "Energy")
                 << " --> " << G4BestUnit(eMax, "Energy") 
@@ -426,8 +426,8 @@ if(fileOpen) dataFile << "\n\n List of nuclear reactions: \n" << G4endl;
   }
 
   if(fileOpen) {
-    dataFile << "============================================================================\n" << G4endl;
-    dataFile.close();
+    outputFile << "============================================================================\n" << G4endl;
+    outputFile.close();
   }
     
 
@@ -440,6 +440,22 @@ if(fileOpen) dataFile << "\n\n List of nuclear reactions: \n" << G4endl;
   } else {
     xsFile << G4BestUnit(fEkin, "Energy") << ", " << G4BestUnit(crossSection,"Surface") << std::endl;
     xsFile.close();
+  }
+
+  filename = "data.txt";
+  std::ofstream dataFile;
+  dataFile.open(filename, std::ios::app);
+  if (!dataFile.is_open()) {
+      std::cerr << "Failed to open the file." << std::endl;
+  } else {
+    if(dataFile.tellp() == 0) //Check if dataFile is empty
+      dataFile << "Energy\t\t#Entries\tHits\ttotal_%\t\trelative_%" << G4endl;
+    dataFile << G4BestUnit(fEkin,"Energy") << "\t"
+           << entries << "\t\t"
+           << hits << "\t"
+           << (((G4double)hits / (G4double)numberOfEvent)*100.0) << "%\t\t"
+           << (((G4double)hits / (G4double)entries)*100.0) << "%" << G4endl;
+    dataFile.close();
   }
 
   //remove all contents in fProcCounter, fCount 

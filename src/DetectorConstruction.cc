@@ -60,7 +60,7 @@ void DetectorConstruction::DefineMaterials()
     G4Isotope* he3 = new G4Isotope("He3", protons, nucleons, A);
     G4Element* He3 = new G4Element("Helium3", "He3", 1);
     He3->AddIsotope(he3, 100*perCent);
-    G4double pressure = 4*bar;  //Pressure of the detector gas
+    G4double pressure = 4.0*bar;  //Pressure of the detector gas
     G4double temperature = 293*kelvin;
     G4double molar_constant = CLHEP::Avogadro*CLHEP::k_Boltzmann; 
     density = (A*pressure)/(temperature*molar_constant);

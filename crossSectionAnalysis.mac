@@ -1,158 +1,506 @@
-
 /control/verbose 0
 /run/verbose 0
 /tracking/verbose 0
 #
 /run/initialize
 #
-/analysis/setFileName hits_001eV_4bar.root
 /gun/energy 0.001 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_0015eV_4bar.root
-/gun/energy 0.0015 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_002eV_4bar.root
-/gun/energy 0.002 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_0025eV_4bar.root
-/gun/energy 0.0025 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_003eV_4bar.root
 /gun/energy 0.003 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_0035eV_4bar.root
-/gun/energy 0.0035 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_004eV_4bar.root
-/gun/energy 0.004 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_0045eV_4bar.root
-/gun/energy 0.0045 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_005eV_4bar.root
 /gun/energy 0.005 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_0055eV_4bar.root
-/gun/energy 0.0055 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_006eV_4bar.root
-/gun/energy 0.006 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_007eV_4bar.root
 /gun/energy 0.007 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_008eV_4bar.root
-/gun/energy 0.008 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_009eV_4bar.root
 /gun/energy 0.009 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_010eV_4bar.root
-/gun/energy 0.010 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_011eV_4bar.root
 /gun/energy 0.011 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_012eV_4bar.root
-/gun/energy 0.012 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_013eV_4bar.root
 /gun/energy 0.013 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_014eV_4bar.root
-/gun/energy 0.014 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_015eV_4bar.root
 /gun/energy 0.015 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_016eV_4bar.root
-/gun/energy 0.016 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_017eV_4bar.root
 /gun/energy 0.017 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_018eV_4bar.root
-/gun/energy 0.018 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_019eV_4bar.root
 /gun/energy 0.019 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_020eV_4bar.root
-/gun/energy 0.020 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_021eV_4bar.root
 /gun/energy 0.021 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_022eV_4bar.root
-/gun/energy 0.022 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_023eV_4bar.root
 /gun/energy 0.023 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_024eV_4bar.root
-/gun/energy 0.024 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_025eV_4bar.root
 /gun/energy 0.025 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_026eV_4bar.root
-/gun/energy 0.026 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_028eV_4bar.root
-/gun/energy 0.028 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_030eV_4bar.root
 /gun/energy 0.030 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_032eV_4bar.root
-/gun/energy 0.032 eV
+/gun/energy 0.035 eV
 /run/beamOn 100000
 #
-/analysis/setFileName hits_034eV_4bar.root
-/gun/energy 0.034 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_036eV_4bar.root
-/gun/energy 0.036 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_038eV_4bar.root
-/gun/energy 0.038 eV
-/run/beamOn 100000
-#
-/analysis/setFileName hits_040eV_4bar.root
 /gun/energy 0.040 eV
+/run/beamOn 100000
+#
+/gun/energy 0.045 eV
+/run/beamOn 100000
+#
+/gun/energy 0.050 eV
+/run/beamOn 100000
+#
+/gun/energy 0.055 eV
+/run/beamOn 100000
+#
+/gun/energy 0.060 eV
+/run/beamOn 100000
+#
+/gun/energy 0.065 eV
+/run/beamOn 100000
+#
+/gun/energy 0.070 eV
+/run/beamOn 100000
+#
+/gun/energy 0.075 eV
+/run/beamOn 100000
+#
+/gun/energy 0.080 eV
+/run/beamOn 100000
+#
+/gun/energy 0.085 eV
+/run/beamOn 100000
+#
+/gun/energy 0.090 eV
+/run/beamOn 100000
+#
+/gun/energy 0.095 eV
+/run/beamOn 100000
+#
+/gun/energy 0.100 eV
+/run/beamOn 100000
+#
+/gun/energy 0.105 eV
+/run/beamOn 100000
+#
+/gun/energy 0.110 eV
+/run/beamOn 100000
+#
+/gun/energy 0.115 eV
+/run/beamOn 100000
+#
+/gun/energy 0.120 eV
+/run/beamOn 100000
+#
+/gun/energy 0.125 eV
+/run/beamOn 100000
+#
+/gun/energy 0.130 eV
+/run/beamOn 100000
+#
+/gun/energy 0.135 eV
+/run/beamOn 100000
+#
+/gun/energy 0.140 eV
+/run/beamOn 100000
+#
+/gun/energy 0.145 eV
+/run/beamOn 100000
+#
+/gun/energy 0.150 eV
+/run/beamOn 100000
+#
+/gun/energy 0.155 eV
+/run/beamOn 100000
+#
+/gun/energy 0.160 eV
+/run/beamOn 100000
+#
+/gun/energy 0.165 eV
+/run/beamOn 100000
+#
+/gun/energy 0.170 eV
+/run/beamOn 100000
+#
+/gun/energy 0.175 eV
+/run/beamOn 100000
+#
+/gun/energy 0.180 eV
+/run/beamOn 100000
+#
+/gun/energy 0.185 eV
+/run/beamOn 100000
+#
+/gun/energy 0.190 eV
+/run/beamOn 100000
+#
+/gun/energy 0.195 eV
+/run/beamOn 100000
+#
+/gun/energy 0.200 eV
+/run/beamOn 100000
+#
+/gun/energy 0.205 eV
+/run/beamOn 100000
+#
+/gun/energy 0.210 eV
+/run/beamOn 100000
+#
+/gun/energy 0.215 eV
+/run/beamOn 100000
+#
+/gun/energy 0.220 eV
+/run/beamOn 100000
+#
+/gun/energy 0.225 eV
+/run/beamOn 100000
+#
+/gun/energy 0.230 eV
+/run/beamOn 100000
+#
+/gun/energy 0.235 eV
+/run/beamOn 100000
+#
+/gun/energy 0.240 eV
+/run/beamOn 100000
+#
+/gun/energy 0.245 eV
+/run/beamOn 100000
+#
+/gun/energy 0.250 eV
+/run/beamOn 100000
+#
+/gun/energy 0.255 eV
+/run/beamOn 100000
+#
+/gun/energy 0.260 eV
+/run/beamOn 100000
+#
+/gun/energy 0.265 eV
+/run/beamOn 100000
+#
+/gun/energy 0.270 eV
+/run/beamOn 100000
+#
+/gun/energy 0.275 eV
+/run/beamOn 100000
+#
+/gun/energy 0.280 eV
+/run/beamOn 100000
+#
+/gun/energy 0.285 eV
+/run/beamOn 100000
+#
+/gun/energy 0.290 eV
+/run/beamOn 100000
+#
+/gun/energy 0.295 eV
+/run/beamOn 100000
+#
+/gun/energy 0.300 eV
+/run/beamOn 100000
+#
+/gun/energy 0.305 eV
+/run/beamOn 100000
+#
+/gun/energy 0.310 eV
+/run/beamOn 100000
+#
+/gun/energy 0.315 eV
+/run/beamOn 100000
+#
+/gun/energy 0.320 eV
+/run/beamOn 100000
+#
+/gun/energy 0.325 eV
+/run/beamOn 100000
+#
+/gun/energy 0.330 eV
+/run/beamOn 100000
+#
+/gun/energy 0.335 eV
+/run/beamOn 100000
+#
+/gun/energy 0.340 eV
+/run/beamOn 100000
+#
+/gun/energy 0.345 eV
+/run/beamOn 100000
+#
+/gun/energy 0.350 eV
+/run/beamOn 100000
+#
+/gun/energy 0.355 eV
+/run/beamOn 100000
+#
+/gun/energy 0.360 eV
+/run/beamOn 100000
+#
+/gun/energy 0.365 eV
+/run/beamOn 100000
+#
+/gun/energy 0.370 eV
+/run/beamOn 100000
+#
+/gun/energy 0.375 eV
+/run/beamOn 100000
+#
+/gun/energy 0.380 eV
+/run/beamOn 100000
+#
+/gun/energy 0.385 eV
+/run/beamOn 100000
+#
+/gun/energy 0.390 eV
+/run/beamOn 100000
+#
+/gun/energy 0.395 eV
+/run/beamOn 100000
+#
+/gun/energy 0.400 eV
+/run/beamOn 100000
+#
+/gun/energy 0.405 eV
+/run/beamOn 100000
+#
+/gun/energy 0.410 eV
+/run/beamOn 100000
+#
+/gun/energy 0.415 eV
+/run/beamOn 100000
+#
+/gun/energy 0.420 eV
+/run/beamOn 100000
+#
+/gun/energy 0.425 eV
+/run/beamOn 100000
+#
+/gun/energy 0.430 eV
+/run/beamOn 100000
+#
+/gun/energy 0.435 eV
+/run/beamOn 100000
+#
+/gun/energy 0.440 eV
+/run/beamOn 100000
+#
+/gun/energy 0.445 eV
+/run/beamOn 100000
+#
+/gun/energy 0.450 eV
+/run/beamOn 100000
+#
+/gun/energy 0.455 eV
+/run/beamOn 100000
+#
+/gun/energy 0.460 eV
+/run/beamOn 100000
+#
+/gun/energy 0.465 eV
+/run/beamOn 100000
+#
+/gun/energy 0.470 eV
+/run/beamOn 100000
+#
+/gun/energy 0.475 eV
+/run/beamOn 100000
+#
+/gun/energy 0.480 eV
+/run/beamOn 100000
+#
+/gun/energy 0.485 eV
+/run/beamOn 100000
+#
+/gun/energy 0.490 eV
+/run/beamOn 100000
+#
+/gun/energy 0.495 eV
+/run/beamOn 100000
+#
+/gun/energy 0.500 eV
+/run/beamOn 100000
+#
+/gun/energy 0.505 eV
+/run/beamOn 100000
+#
+/gun/energy 0.510 eV
+/run/beamOn 100000
+#
+/gun/energy 0.515 eV
+/run/beamOn 100000
+#
+/gun/energy 0.520 eV
+/run/beamOn 100000
+#
+/gun/energy 0.525 eV
+/run/beamOn 100000
+#
+/gun/energy 0.530 eV
+/run/beamOn 100000
+#
+/gun/energy 0.535 eV
+/run/beamOn 100000
+#
+/gun/energy 0.540 eV
+/run/beamOn 100000
+#
+/gun/energy 0.545 eV
+/run/beamOn 100000
+#
+/gun/energy 0.550 eV
+/run/beamOn 100000
+#
+/gun/energy 0.555 eV
+/run/beamOn 100000
+#
+/gun/energy 0.560 eV
+/run/beamOn 100000
+#
+/gun/energy 0.565 eV
+/run/beamOn 100000
+#
+/gun/energy 0.570 eV
+/run/beamOn 100000
+#
+/gun/energy 0.575 eV
+/run/beamOn 100000
+#
+/gun/energy 0.580 eV
+/run/beamOn 100000
+#
+/gun/energy 0.585 eV
+/run/beamOn 100000
+#
+/gun/energy 0.590 eV
+/run/beamOn 100000
+#
+/gun/energy 0.595 eV
+/run/beamOn 100000
+#
+/gun/energy 0.600 eV
+/run/beamOn 100000
+#
+/gun/energy 0.605 eV
+/run/beamOn 100000
+#
+/gun/energy 0.610 eV
+/run/beamOn 100000
+#
+/gun/energy 0.615 eV
+/run/beamOn 100000
+#
+/gun/energy 0.620 eV
+/run/beamOn 100000
+#
+/gun/energy 0.625 eV
+/run/beamOn 100000
+#
+/gun/energy 0.630 eV
+/run/beamOn 100000
+#
+/gun/energy 0.635 eV
+/run/beamOn 100000
+#
+/gun/energy 0.640 eV
+/run/beamOn 100000
+#
+/gun/energy 0.645 eV
+/run/beamOn 100000
+#
+/gun/energy 0.650 eV
+/run/beamOn 100000
+#
+/gun/energy 0.655 eV
+/run/beamOn 100000
+#
+/gun/energy 0.660 eV
+/run/beamOn 100000
+#
+/gun/energy 0.665 eV
+/run/beamOn 100000
+#
+/gun/energy 0.670 eV
+/run/beamOn 100000
+#
+/gun/energy 0.675 eV
+/run/beamOn 100000
+#
+/gun/energy 0.680 eV
+/run/beamOn 100000
+#
+/gun/energy 0.685 eV
+/run/beamOn 100000
+#
+/gun/energy 0.690 eV
+/run/beamOn 100000
+#
+/gun/energy 0.695 eV
+/run/beamOn 100000
+#
+/gun/energy 0.700 eV
+/run/beamOn 100000
+#
+/gun/energy 0.705 eV
+/run/beamOn 100000
+#
+/gun/energy 0.710 eV
+/run/beamOn 100000
+#
+/gun/energy 0.715 eV
+/run/beamOn 100000
+#
+/gun/energy 0.720 eV
+/run/beamOn 100000
+#
+/gun/energy 0.725 eV
+/run/beamOn 100000
+#
+/gun/energy 0.730 eV
+/run/beamOn 100000
+#
+/gun/energy 0.735 eV
+/run/beamOn 100000
+#
+/gun/energy 0.740 eV
+/run/beamOn 100000
+#
+/gun/energy 0.745 eV
+/run/beamOn 100000
+#
+/gun/energy 0.750 eV
+/run/beamOn 100000
+#
+/gun/energy 0.755 eV
+/run/beamOn 100000
+#
+/gun/energy 0.760 eV
+/run/beamOn 100000
+#
+/gun/energy 0.765 eV
+/run/beamOn 100000
+#
+/gun/energy 0.770 eV
+/run/beamOn 100000
+#
+/gun/energy 0.775 eV
+/run/beamOn 100000
+#
+/gun/energy 0.780 eV
+/run/beamOn 100000
+#
+/gun/energy 0.785 eV
+/run/beamOn 100000
+#
+/gun/energy 0.790 eV
+/run/beamOn 100000
+#
+/gun/energy 0.795 eV
 /run/beamOn 100000

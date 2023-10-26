@@ -35,21 +35,25 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
     //Focused neutron beam with round cross sectional area
-    /*
+    
     G4double r, theta, y, z;
+    ///*
     r = detector->GetRadius() * G4UniformRand();
     theta = twopi * G4UniformRand();
     y = r * sin(theta);
     z = r * cos(theta);
     G4ThreeVector pos((r + 10.0)*mm, y*mm, ((detector->GetLength())+z)*mm);
-    */
+    //*/
+    
 
     //Neutron beam over the full length and height of the counter tube
+    /*
     G4double r, y, z;
     r = detector->GetRadius();
     y = 25.2 * G4UniformRand();
     z = 100 * G4UniformRand(); 
     G4ThreeVector pos((r + 10.0)*mm, (y-r)*mm, z*mm);
+    */
 
     particleGun->SetParticlePosition(pos);
     particleGun->GeneratePrimaryVertex(anEvent);

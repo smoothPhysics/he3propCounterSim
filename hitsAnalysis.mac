@@ -40,3 +40,20 @@
 /analysis/setFileName hits_025eV_4bar.root
 /gun/energy 0.025 eV
 /run/beamOn 100000
+#
+/analysis/setFileName hits_030eV_4bar.root
+/gun/energy 0.030 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_035eV_4bar.root
+/gun/energy 0.035 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_040eV_4bar.root
+/gun/energy 0.040 eV
+/run/beamOn 100000
+#
+/analysis/setFileName hits_043eV_4bar.root
+/gun/energy 0.043 eV
+/run/beamOn 100000
+
