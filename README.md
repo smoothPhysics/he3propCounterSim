@@ -45,13 +45,15 @@ Goal of each run of n events is to:<br />
 5. List all hadronic processes with the counter tube (wall + gas) <br />
 6. List all produced particles through inelastic processes<br />
 7. Get the energy distribution of the proton and the triton<br />
-8. To see the wall effect: Get the energy deposit of the secondary particles for each inelastic event in the counter tube.<br /><br />
+8. To see the wall effect: Get the energy deposit of the secondary particles for each inelastic event in the counter tube.<br />
+9. Study detection efficiency <br /><br />
 
 1, 4, 7 and 8 are saved to a root file with the default name hits.root. It is possible to change the filename via /analysis/setFileName <fileName> in the geant4 interactive mode.<br /><br />
 
-The cross section information (point 2) is added to the output file crossSection.txt.<br /><br />
+The cross section information is added to the output file crossSection.txt.<br />
+The detection efficiency data is stored in the output file data.txt<br /><br />
 
-The detector efficiency data, list of nuclear reactions, cross section and the list of produced particles gets written to the output file output.txt.<br />
+The complete output of the program (detector efficiency data, nuclear reactions, cross section, produced particles) gets written to the output file output.txt.<br />
 	
 # HOW TO START ?
 
